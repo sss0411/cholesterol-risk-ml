@@ -6,7 +6,6 @@ st.title("Predicting the Risk of Elevated Cholesterol")
 
 # загрузка модели
 model = joblib.load("rf_cholesterol_model.pkl")
-st.success("Модель успешно загружена")
 
 st.subheader("Введите данные пациента")
 
