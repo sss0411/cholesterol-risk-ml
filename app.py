@@ -7,7 +7,7 @@ st.title("Predicting the Risk of Elevated Cholesterol")
 # загрузка модели
 model = joblib.load("rf_cholesterol_model.pkl")
 
-st.subheader("Введите данные пациента")
+st.subheader("Enter patient data")
 
 # === ВВОД ДАННЫХ ===
 age = st.number_input("Age (years)", min_value=0, max_value=120, value=40)
