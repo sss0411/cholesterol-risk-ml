@@ -49,10 +49,16 @@ input_dict = {
     "physical_inactivity": 1 if physical_inactivity == "Yes" else 0,
 }
 
-input_data = pd.DataFrame(
-    [[input_dict[col] for col in model.feature_names_in_]],
-    columns=model.feature_names_in_
-)
+input_data = pd.DataFrame({
+    "age": [age],
+    "sex": [1 if sex == "Male" else 0],
+    "smoking": [1 if smoking == "Yes" else 0],
+    "alcohol_drinking": [1 if alcohol == "Yes" else 0],
+    "bmi": [bmi],
+    "waist_circumference": [waist],
+    "physical_inactivity": [1 if physical_inactivity == "Yes" else 0],
+})
+
 
 # ===============================
 # Prediction
