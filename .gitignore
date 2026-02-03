@@ -1,16 +1,31 @@
-# model artifacts
-*.pkl
-*.joblib
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
 
-# data files
+# ===============================
+# Jupyter / Colab
+# ===============================
+.ipynb_checkpoints/
+*.ipynb
+
+# ===============================
+# Data files (raw only)
+# ===============================
 *.csv
 *.xlsx
 
-# figures
+# ===============================
+# Figures
+# ===============================
 *.png
 *.jpg
 *.jpeg
 
-# python
-__pycache__/
-.ipynb_checkpoints/
+# ===============================
+# IMPORTANT
+# Do NOT ignore trained ML models
+# ===============================
+# *.pkl      <-- УБРАНО
+# *.joblib   <-- УБРАНО
