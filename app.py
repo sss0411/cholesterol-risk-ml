@@ -39,25 +39,22 @@ physical_inactivity = st.selectbox("Physical inactivity", ["No", "Yes"])
 # ['age', 'sex', 'smoking', 'alcohol_drinking',
 #  'bmi', 'waist_circumference', 'physical_inactivity']
 
-input_dict = {
-    "age": age,
-    "sex": 1 if sex == "Male" else 0,
-    "smoking": 1 if smoking == "Yes" else 0,
-    "alcohol_drinking": 1 if alcohol == "Yes" else 0,
-    "bmi": bmi,
-    "waist_circumference": waist,
-    "physical_inactivity": 1 if physical_inactivity == "Yes" else 0,
-}
+# ===============================
+# Build input EXACTLY as model expects
+# ===============================
+input_data = pd.DataFrame(
+    [[
+        float(age),
+        1 if sex == "Male" else 0,
+        1 if smoking == "Yes" else 0,
+        1 if alcohol == "Yes" else 0,
+        float(bmi),
+        float(waist),
+        1 if physical_inactivity == "Yes" else 0
+    ]],
+    columns=model.feature_names_in_
+)
 
-input_data = pd.DataFrame({
-    "age": [age],
-    "sex": [1 if sex == "Male" else 0],
-    "smoking": [1 if smoking == "Yes" else 0],
-    "alcohol_drinking": [1 if alcohol == "Yes" else 0],
-    "bmi": [bmi],
-    "waist_circumference": [waist],
-    "physical_inactivity": [1 if physical_inactivity == "Yes" else 0],
-})
 
 
 # ===============================
