@@ -7,7 +7,7 @@ import os
 # =========================
 # Model configuration
 # =========================
-MODEL_URL = "PUT_DIRECT_DOWNLOAD_LINK_HERE"
+MODEL_URL = "https://github.com/sss0411/cholesterol-risk-ml/releases/download/v1.0/rf_cholesterol_model.pkl"
 MODEL_PATH = "rf_cholesterol_model.pkl"
 
 @st.cache_resource
