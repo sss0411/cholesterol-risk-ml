@@ -7,6 +7,7 @@ import joblib
 # Load trained model
 # ===============================
 model = joblib.load("rf_cholesterol_model.pkl")
+st.write("Expected features:", model.feature_names_in_)
 
 # ===============================
 # App title
