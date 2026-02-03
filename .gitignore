@@ -1,0 +1,16 @@
+# model artifacts
+*.pkl
+*.joblib
+
+# data files
+*.csv
+*.xlsx
+
+# figures
+*.png
+*.jpg
+*.jpeg
+
+# python
+__pycache__/
+.ipynb_checkpoints/
