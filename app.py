@@ -1,5 +1,5 @@
 import os
-import urllib.request
+import gdown
 import joblib
 import streamlit as st
 
@@ -8,7 +8,11 @@ MODEL_URL = "https://drive.google.com/uc?id=1fmkVFNaCOGt8wzpY7DB7-btaPKRG973-"
 
 if not os.path.exists(MODEL_PATH):
     with st.spinner("Downloading model..."):
-        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+        gdown.download(
+            MODEL_URL,
+            MODEL_PATH,
+            quiet=False
+        )
 
 model = joblib.load(MODEL_PATH)
 
