@@ -1,11 +1,16 @@
-import streamlit as st
-import pandas as pd
+import os
+import urllib.request
 import joblib
+import streamlit as st
 
-# ===============================
-# Load trained model
-# ===============================
-model = joblib.load("rf_cholesterol_model.pkl")
+MODEL_PATH = "rf_cholesterol_model.pkl"
+MODEL_URL = "https://drive.google.com/uc?id=1fmkVFNaCOGt8wzpY7DB7-btaPKRG973-"
+
+if not os.path.exists(MODEL_PATH):
+    with st.spinner("Downloading model..."):
+        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+
+model = joblib.load(MODEL_PATH)
 
 # ===============================
 # App title
