@@ -102,7 +102,7 @@ This application is intended for research and population-based screening purpose
 - It provides probability-based risk estimates only.
 - It does not establish a medical diagnosis.
 - It does not provide treatment recommendations.
-- The results should not replace professional medical evaluation or laboratory testing.
+- The results should not replace professional medical evaluation, laboratory testing, diagnosis, or treatment decisions.
 - User-entered information is processed only during the current session and is not stored by the application.
 """
 )
