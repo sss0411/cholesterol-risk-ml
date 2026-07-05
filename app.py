@@ -91,3 +91,18 @@ if st.button("Predict risk"):
         st.warning("Moderate risk of elevated cholesterol")
     else:
         st.success("Low risk of elevated cholesterol")
+st.markdown("---")
+
+st.info(
+    """
+### Disclaimer
+
+This application is intended for research and population-based screening purposes only.
+
+- It provides probability-based estimates only.
+- It does not establish a medical diagnosis.
+- It does not provide treatment recommendations.
+- The results should not replace professional medical evaluation or laboratory testing.
+- User-entered information is processed only during the current session and is not stored by the application.
+"""
+)
